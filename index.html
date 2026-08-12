@@ -2924,7 +2924,144 @@ function stopFireworks() {
 
 }
 
+/* =========================
+   FIREWORK CRACKER SOUND
+========================= */
 
+let audioContext = null;
+
+function initFireworkAudio() {
+    if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
+
+    if (audioContext.state === "suspended") {
+        audioContext.resume();
+    }
+}
+
+function playFireworkSound(volume = 0.25) {
+
+    initFireworkAudio();
+
+    const now = audioContext.currentTime;
+
+    /* =========================
+       EXPLOSION NOISE
+    ========================= */
+
+    const bufferSize = audioContext.sampleRate * 0.8;
+    const buffer = audioContext.createBuffer(
+        1,
+        bufferSize,
+        audioContext.sampleRate
+    );
+
+    const data = buffer.getChannelData(0);
+
+    for (let i = 0; i < bufferSize; i++) {
+
+        const decay = Math.pow(1 - i / bufferSize, 3);
+
+        data[i] =
+            (Math.random() * 2 - 1) *
+            decay;
+
+    }
+
+    const noise =
+        audioContext.createBufferSource();
+
+    noise.buffer = buffer;
+
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    const filter =
+        audioContext.createBiquadFilter();
+
+    filter.type = "lowpass";
+
+    filter.frequency.setValueAtTime(
+        1800,
+        now
+    );
+
+    filter.frequency.exponentialRampToValueAtTime(
+        300,
+        now + 0.7
+    );
+
+
+    /* =========================
+       VOLUME
+    ========================= */
+
+    const gain =
+        audioContext.createGain();
+
+    gain.gain.setValueAtTime(
+        volume,
+        now
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        now + 0.8
+    );
+
+
+    noise
+        .connect(filter)
+        .connect(gain)
+        .connect(audioContext.destination);
+
+
+    noise.start(now);
+    noise.stop(now + 0.8);
+
+
+    /* =========================
+       DEEP BOOM
+    ========================= */
+
+    const oscillator =
+        audioContext.createOscillator();
+
+    const boomGain =
+        audioContext.createGain();
+
+    oscillator.type = "sine";
+
+    oscillator.frequency.setValueAtTime(
+        90,
+        now
+    );
+
+    oscillator.frequency.exponentialRampToValueAtTime(
+        35,
+        now + 0.45
+    );
+
+    boomGain.gain.setValueAtTime(
+        volume * 0.8,
+        now
+    );
+
+    boomGain.gain.exponentialRampToValueAtTime(
+        0.001,
+        now + 0.45
+    );
+
+    oscillator
+        .connect(boomGain)
+        .connect(audioContext.destination);
+
+    oscillator.start(now);
+    oscillator.stop(now + 0.45);
+}
 /* ==========================================
    START WHEN PAGE 9 OPENS
 ========================================== */
