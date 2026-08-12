@@ -1282,6 +1282,128 @@
     z-index: 5;
 }
 
+        /* =========================
+   PAGE 9 — MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    #page9 {
+        width: 100%;
+        min-height: 100vh;
+        height: 100vh;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 0;
+    }
+
+    #page9 .finale-content {
+        width: 92%;
+        max-width: 100%;
+        padding: 70px 0 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+        z-index: 5;
+    }
+
+    .finale-title {
+        width: 100%;
+
+        font-size: clamp(48px, 14vw, 70px);
+
+        line-height: 1.15;
+
+        margin-bottom: 25px;
+
+        padding: 0 5px;
+    }
+
+    .finale-photo-frame {
+        width: 88vw;
+        max-width: 400px;
+
+        padding: 8px;
+
+        border-radius: 20px;
+    }
+
+    .finale-photo {
+        width: 100%;
+        height: auto;
+
+        max-height: 55vh;
+
+        object-fit: contain;
+
+        border-radius: 14px;
+    }
+
+    .finale-text {
+        width: 95%;
+
+        font-size: clamp(26px, 7vw, 36px);
+
+        line-height: 1.4;
+
+        margin-top: 20px;
+    }
+
+    .finale-text.small {
+        font-size: clamp(22px, 5.8vw, 30px);
+
+        margin-top: 12px;
+    }
+
+    .finale-signature {
+        font-size: clamp(32px, 8vw, 45px);
+
+        margin-top: 22px;
+    }
+
+    /* START BUTTON */
+
+    #startButton {
+        position: relative;
+
+        width: min(80%, 260px);
+
+        height: 55px;
+
+        margin: 10px auto 50px;
+
+        flex-shrink: 0;
+
+        z-index: 10;
+    }
+
+    /* BACK BUTTON */
+
+    #page9 .back-button {
+        position: fixed;
+
+        top: 15px;
+        left: 15px;
+
+        z-index: 100;
+
+        font-size: 14px;
+
+        padding: 10px 18px;
+    }
+
+}
+        v
 /* =========================
    BACK BUTTON
 ========================= */
