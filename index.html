@@ -1,0 +1,3005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise ❤️</title>
+
+    <!-- Romantic Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        body {
+            overflow: hidden;
+            background: #050816;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+
+            position: absolute;
+
+            width: 100%;
+            height: 100vh;
+
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #182b5c 0%,
+                    #0b1533 35%,
+                    #050816 75%
+                );
+
+            transition:
+                opacity 1s ease,
+                visibility 1s ease;
+
+        }
+
+
+        .hidden {
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+        }
+
+
+        /* =========================
+           STARS
+        ========================= */
+
+        .stars {
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            top: 0;
+            left: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+        }
+
+
+        .star {
+
+            position: absolute;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            opacity: 0.8;
+
+            animation:
+                twinkle 3s infinite ease-in-out;
+
+        }
+
+
+        @keyframes twinkle {
+
+            0% {
+                opacity: 0.2;
+                transform: scale(0.7);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(0.7);
+            }
+
+        }
+
+
+        /* =========================
+   REALISTIC ANIMATED MOON
+========================= */
+
+.moon {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 10%;
+    right: 12%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,0.95) 0%,
+            rgba(245,242,220,0.95) 25%,
+            rgba(210,207,188,0.95) 65%,
+            rgba(145,143,130,0.95) 100%
+        );
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(255,248,223,0.75),
+        0 0 35px rgba(255,248,223,0.35),
+        0 0 80px rgba(255,248,223,0.15);
+
+    animation: moonFloat 8s ease-in-out infinite;
+}
+
+/* Moon surface */
+
+.moon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+
+        /* Large craters */
+        radial-gradient(
+            circle at 25% 35%,
+            rgba(120,120,110,0.32) 0 8%,
+            transparent 9%
+        ),
+
+        radial-gradient(
+            circle at 65% 25%,
+            rgba(110,110,100,0.28) 0 6%,
+            transparent 7%
+        ),
+
+        radial-gradient(
+            circle at 72% 65%,
+            rgba(115,115,105,0.30) 0 10%,
+            transparent 11%
+        ),
+
+        radial-gradient(
+            circle at 38% 75%,
+            rgba(110,110,100,0.25) 0 7%,
+            transparent 8%
+        ),
+
+        radial-gradient(
+            circle at 52% 48%,
+            rgba(125,125,115,0.22) 0 5%,
+            transparent 6%
+        ),
+
+        /* Smaller surface details */
+        radial-gradient(
+            circle at 18% 65%,
+            rgba(100,100,95,0.20) 0 3%,
+            transparent 4%
+        ),
+
+        radial-gradient(
+            circle at 82% 40%,
+            rgba(100,100,95,0.18) 0 4%,
+            transparent 5%
+        ),
+
+        radial-gradient(
+            circle at 45% 18%,
+            rgba(100,100,95,0.18) 0 3%,
+            transparent 4%
+        );
+
+    animation: moonSurface 35s linear infinite;
+}
+
+/* Dark side shading */
+
+.moon::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 60% 75% 50%,
+            rgba(57, 58, 60, 0.48) 0%,
+            rgba(20,25,40,0.22) 35%,
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+/* Very slow floating movement */
+
+@keyframes moonFloat {
+
+    60%, 100% {
+        transform: translateY(25px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+/* Slowly move the crater pattern */
+
+@keyframes moonSurface {
+
+    from {
+        transform: rotate(180deg) scale(1.05);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.05);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .moon {
+
+        width: 75px;
+        height: 75px;
+
+        top: 8%;
+        right: 8%;
+
+    }
+
+}
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+
+            position: relative;
+
+            z-index: 5;
+
+            width: 90%;
+            max-width: 800px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+        }
+
+
+        /* =========================
+           FIRST PAGE
+        ========================= */
+.title {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(52px, 8vw, 88px);
+
+    font-weight: 400;
+
+    color: #ffffff;
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 30px rgba(255,150,190,0.25);
+
+}
+
+
+.subtitle {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    color: rgba(255, 232, 241, 0.95);
+
+    max-width: 650px;
+
+    margin: 0 auto 42px;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 10px rgba(255,180,210,0.20);
+
+}
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+
+            border: none;
+
+            padding: 16px 45px;
+
+            border-radius: 50px;
+
+          background: rgba(145, 80, 255, 0.9);
+
+            color: white;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 0 20px rgba(145, 80, 255, 0.4);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+
+        }
+
+
+        .button:hover {
+
+            transform: scale(1.08);
+
+            background: #5f0259;
+
+            box-shadow:
+                0 0 30px #5f0259;
+
+        }
+
+
+        .button:active {
+
+            transform: scale(0.96);
+
+        }
+
+
+        /* =========================
+           SECOND PAGE
+        ========================= */
+
+        .second-title {
+
+            font-family: 'Great Vibes', cursive;
+
+            font-size:
+                clamp(48px, 8vw, 85px);
+
+            font-weight: 400;
+
+            color: #fff;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .second-text {
+
+            font-family: 'Parisienne', cursive;
+
+            font-size:
+                clamp(25px, 4vw, 38px);
+
+            color: #ffe8f1;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        /* =========================
+           NAME INPUT
+        ========================= */
+
+        .name-input {
+
+            width: min(90%, 450px);
+
+            padding: 17px 22px;
+
+            border-radius: 50px;
+
+            border: 2px solid
+                rgba(255,255,255,0.25);
+
+            outline: none;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            color: white;
+
+            text-align: center;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 17px;
+
+            margin-bottom: 25px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .name-input::placeholder {
+
+            color:
+                rgba(255,255,255,0.6);
+
+        }
+
+
+        .name-input:focus {
+
+            border-color: #ff6f9f;
+
+            box-shadow:
+                0 0 20px
+                rgba(255,92,145,0.3);
+
+        }
+
+
+        /* =========================
+           WRONG NAME MESSAGE
+        ========================= */
+
+        .error {
+
+            min-height: 24px;
+
+            color: #ff9dbd;
+
+            font-size: 14px;
+
+            margin-top: -15px;
+
+            margin-bottom: 15px;
+
+            opacity: 0;
+
+            transform: translateY(-5px);
+
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+
+        .error.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =========================
+           SUCCESS MESSAGE
+        ========================= */
+
+        .success {
+
+            position: fixed;
+
+            inset: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #35152b 0%,
+                    #0b1028 50%,
+                    #050816 100%
+                );
+
+            z-index: 20;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity 1s ease,
+                visibility 1s ease;
+
+        }
+
+
+        .success.show {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+        .success-content {
+
+            width: 90%;
+
+            max-width: 700px;
+
+        }
+
+
+        .success-title {
+
+            font-family: 'Great Vibes', cursive;
+
+            font-size:
+                clamp(55px, 10vw, 100px);
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .success-text {
+
+            font-family: 'Parisienne', cursive;
+
+            font-size:
+                clamp(27px, 5vw, 45px);
+
+            color: #ffe8f1;
+
+        }
+
+/* =========================
+   PERSONALIZED GREETING
+========================= */
+
+.greeting-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(60px, 10vw, 105px);
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.3),
+        0 0 45px rgba(255,120,170,0.25);
+}
+
+
+.greeting-text {
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    line-height: 1.5;
+
+    color: #ffe8f1;
+
+    max-width: 750px;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 0 12px rgba(255,180,210,0.25);
+}
+
+
+.greeting-text.small {
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(27px, 4.5vw, 40px);
+
+    line-height: 1.5;
+
+    color: rgba(255,232,241,0.92);
+
+    max-width: 750px;
+}
+/* =========================
+   MEMORY GALLERY
+========================= */
+
+.gallery-title {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(55px, 9vw, 65px);
+
+    font-weight: 400;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.3),
+        0 0 40px rgba(255,120,170,0.25);
+}
+
+
+/* =========================
+   VIDEO MEMORY
+========================= */
+
+.video-frame {
+
+    width: min(90vw, 800px);
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 35px rgba(255, 100, 160, 0.20);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+#memoryVideo {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+}
+
+
+.video-caption {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(24px, 4vw, 36px);
+
+    color: #ffe8f1;
+
+    margin-top: 25px;
+
+}
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .moon {
+
+                width: 75px;
+                height: 75px;
+
+                top: 8%;
+                right: 8%;
+
+            }
+
+
+            .content {
+
+                width: 92%;
+
+            }
+
+
+            .subtitle {
+
+                max-width: 340px;
+
+                margin-bottom: 35px;
+
+            }
+
+
+            .second-text {
+
+                max-width: 340px;
+
+            }
+
+
+            .button {
+
+                padding: 15px 40px;
+
+                font-size: 17px;
+
+            }
+
+        }
+/* =========================
+   PAGE 5 SCROLL
+========================= */
+
+#page5 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+#page5 .content {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+/* =========================
+   PAGE 6 — LOVE LETTER
+========================= */
+
+.letter-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(50px, 8vw, 80px);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.love-letter {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(17px, 2.5vw, 21px);
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 0.3px;
+    color: rgba(255, 240, 246, 0.95);
+
+    max-width: 700px;
+
+    text-align: center;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 8px rgba(255, 180, 210, 0.15);
+}
+
+.love-letter p {
+    margin-bottom: 22px;
+}
+
+/* =========================
+   PAGE 7 — LOVE QUESTION
+========================= */
+
+.question-title {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(50px, 8vw, 80px);
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.3),
+        0 0 40px rgba(255,120,170,0.3);
+}
+
+
+.question-text {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(38px, 6vw, 60px);
+
+    color: #ffe8f1;
+
+    margin-bottom: 40px;
+
+}
+
+
+.question-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.no-button {
+
+    position: absolute;
+
+    z-index: 10;
+
+    transition:
+        left 0.25s ease,
+        top 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+.question-buttons {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 65px;
+}
+.no-button {
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+    z-index: 10;
+}
+
+#yesButton,
+#noButton {
+    width: 230px;
+    height: 58px;
+    padding: 0;
+}
+
+/* =========================
+   PAGE 8 — PHOTO JOURNEY
+========================= */
+
+.photo-gallery-frame {
+
+    position: relative;
+
+    width: min(90vw, 800px);
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 35px rgba(255, 100, 160, 0.20);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.gallery-photo-container {
+
+    width: 100%;
+
+    height: min(65vh, 550px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+#galleryPhoto {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.gallery-arrow {
+
+    position: absolute;
+
+    z-index: 5;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: background: rgb(149, 3, 146);
+
+
+    color:  #8f4cff;
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+          0 0 20px rgb(149, 3, 146);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.gallery-arrow:hover {
+
+    transform: scale(1.25);
+
+    background: rgb(149, 3, 146);
+}
+
+
+.left-arrow {
+
+    left: 20px;
+}
+
+
+.right-arrow {
+
+    right: 20px;
+}
+
+
+.photo-counter {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    color: rgba(255,255,255,0.8);
+
+    margin-top: 12px;
+}
+
+
+.photo-hint {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(23px, 4vw, 32px);
+
+    color: #ffe8f1;
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+#finaleButton {
+
+    margin-top: 5px;
+}
+
+/* =========================
+   PAGE 8 SCROLL
+========================= */
+
+#page8 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+#page8 .content {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+/* =========================
+   PAGE 9 — GRAND FINALE
+========================= */
+
+#page9 {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.finale-content {
+    position: relative;
+    z-index: 5;
+
+    width: 92%;
+    max-width: 850px;
+
+    padding: 50px 0 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.finale-title {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(52px, 9vw, 90px);
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.35),
+        0 0 45px rgba(255,120,170,0.35);
+}
+
+.finale-photo-frame {
+
+    width: min(88vw, 650px);
+
+    padding: 10px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 0 35px rgba(255,100,160,0.25);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.finale-photo {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+}
+
+.finale-text {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: clamp(28px, 5vw, 42px);
+
+    line-height: 1.5;
+
+    color: #ffe8f1;
+
+    max-width: 750px;
+
+    margin-top: 25px;
+
+    text-shadow:
+        0 0 12px rgba(255,180,210,0.25);
+}
+
+.finale-text.small {
+
+    font-size: clamp(24px, 4vw, 34px);
+
+    margin-top: 10px;
+}
+
+.finale-signature {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    margin-top: 30px;
+
+    color: #ffffff;
+}
+/* =========================
+   PAGE 9 SCROLL
+========================= */
+
+#page9 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+#page9 .finale-content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+/* =========================
+   GRAND FINALE FIREWORKS
+========================= */
+
+#page9 {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Fireworks canvas */
+
+#fireworksCanvas {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* Keep finale content above fireworks */
+
+#page9 .finale-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 50;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background: rgba(145, 80, 255, 0.75);
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 15px rgba(145,80,255,0.35);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.06);
+
+    background: #8f4cff;
+
+    box-shadow:
+        0 0 25px rgba(145,80,255,0.6);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+
+    .back-button {
+        top: 15px;
+        left: 15px;
+
+        padding: 8px 16px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* =========================
+   PAGE 9 — START BUTTON
+========================= */
+
+.start-button {
+    margin-top: 45px;
+    margin-bottom: 30px;
+
+    padding: 16px 50px;
+
+    font-size: 18px;
+}
+
+.start-button:hover {
+    transform: scale(1.08);
+
+    background: #8f55e8;
+
+    box-shadow:
+        0 0 30px rgba(150, 90, 255, 0.7),
+        0 0 60px rgba(150, 90, 255, 0.35);
+}
+
+.start-button:active {
+    transform: scale(0.96);
+}
+#startButton {
+    margin-top: 20px;
+}
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         STARS
+    ========================= -->
+
+    <div class="stars">
+
+        <span class="star" style="top:10%;left:15%;"></span>
+        <span class="star" style="top:20%;left:30%;"></span>
+        <span class="star" style="top:15%;left:55%;"></span>
+        <span class="star" style="top:30%;left:75%;"></span>
+        <span class="star" style="top:40%;left:10%;"></span>
+        <span class="star" style="top:50%;left:25%;"></span>
+        <span class="star" style="top:60%;left:45%;"></span>
+        <span class="star" style="top:70%;left:70%;"></span>
+        <span class="star" style="top:80%;left:20%;"></span>
+        <span class="star" style="top:85%;left:85%;"></span>
+        <span class="star" style="top:35%;left:90%;"></span>
+        <span class="star" style="top:75%;left:55%;"></span>
+
+    </div>
+
+
+    <!-- =========================
+         PAGE 1
+    ========================= -->
+
+    <section id="page1" class="page">
+
+        <div class="moon"></div>
+
+        <div class="content">
+
+            <h1 class="title">
+                A Little Surprise...
+            </h1>
+
+            <p class="subtitle">
+                Someone made something special just for you ❤️
+            </p>
+
+            <button
+                id="beginButton"
+                class="button">
+
+                Begin ❤️
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE 2
+    ========================= -->
+
+    <section
+        id="page2"
+        class="page hidden">
+<button class="back-button" data-back="page1">
+    ← Back
+</button>
+        <div class="moon"></div>
+
+        <div class="content">
+
+            <h1 class="second-title">
+                Before we begin...
+            </h1>
+
+            <p class="second-text">
+                Tell me your beautiful name ❤️
+            </p>
+
+
+            <input
+                id="nameInput"
+                class="name-input"
+                type="text"
+                placeholder="Enter your name..."
+                autocomplete="off">
+
+
+            <p
+                id="errorMessage"
+                class="error">
+
+                Please enter your name ❤️
+
+            </p>
+
+
+            <button
+                id="continueButton"
+                class="button">
+
+                Continue ❤️
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUCCESS SCREEN
+    ========================= -->
+
+   <!-- =========================
+     PAGE 3 — FOUND HER
+========================= -->
+
+<div
+    id="successScreen"
+    class="success">
+<button class="back-button" data-back="page2">
+    ← Back
+</button>
+    <div class="success-content">
+
+        <h1 class="success-title">
+            There you are... ❤️
+        </h1>
+
+        <p class="success-text">
+            I knew I'd find you.
+        </p>
+
+        <button
+            id="goAheadButton"
+            class="button">
+
+            Go Ahead ❤️
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PAGE 4 — PERSONALIZED GREETING
+========================= -->
+
+<section
+    id="page4"
+    class="page hidden">
+
+    <button class="back-button" data-back="page3">
+    ← Back
+</button>
+    <div class="moon"></div>
+
+    <div class="content">
+
+        <h1 class="greeting-title">
+            Hello, Roja ❤️
+        </h1>
+
+        <p class="greeting-text">
+            I made this little place just for you...
+        </p>
+
+        <p class="greeting-text small">
+           I just want to wish you a beautiful birthday,
+    filled with happiness, love, and all the things that make you smile, My Love ❤️
+        </p>
+
+        <p class="greeting-text small">
+           Stay with me for your birthday celebration ❤️
+        </p>
+
+        <button
+            id="beginMemoriesButton"
+            class="button">
+
+            Let's Begin ❤️
+
+        </button>
+
+    </div>
+
+</section>
+<!-- =========================
+     PAGE 5 — VIDEO MEMORY
+========================= -->
+
+<section id="page5" class="page hidden">
+
+    <button class="back-button" data-back="page4">
+    ← Back
+</button>
+    <div class="content">
+
+        <h1 class="gallery-title">
+            A Little Something For You ❤️
+        </h1>
+
+        <div class="video-frame">
+
+            <video
+                id="memoryVideo"
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="Assets/Images/video1.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+        <p class="video-caption">
+            Some memories are better watched than described... ❤️
+        </p>
+        <button
+    id="videoNextButton"
+    class="button">
+
+    Stay With Me ❤️
+
+</button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PAGE 6 — LOVE LETTER
+========================= -->
+
+<section id="page6" class="page hidden">
+
+    <button class="back-button" data-back="page5">
+    ← Back
+</button>
+    <div class="content">
+
+        <h1 class="letter-title">
+           Happy Birthday, Rose ❤️
+        </h1>
+
+        <div class="love-letter">
+ <p>
+                Roja, My Love, being the most valuable asset of my life,
+                you have so many responsibilities with me.
+                Your presence and acts will decide how my life goes,
+                how I progress through, and how my career, mental and
+                financial situation is going to be.
+            </p>
+
+            <p>
+                On this very special day, I would like to wish you
+                a fantastic birthday.
+            </p>
+
+            <p>
+                Hopefully, the next year I'll be wishing you
+                from the same bed you sleep, by hugging you,
+                <strong>"Happy Birthday, My Wife" 🎈❤️</strong>
+            </p>
+
+        </div>
+
+        <button
+            id="letterNextButton"
+            class="button">
+
+            There's More ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PAGE 7 — ONE LAST QUESTION
+========================= -->
+
+<section id="page7" class="page hidden">
+
+    <button class="back-button" data-back="page6">
+    ← Back
+</button>
+    <div class="content">
+
+        <h1 class="question-title">
+            Wait... one more thing ❤️
+        </h1>
+
+        <p class="question-text">
+            Do you love me?
+        </p>
+
+        <div class="question-buttons">
+
+    <button
+        id="yesButton"
+        class="button">
+
+        YES, OF COURSE ❤️
+
+    </button>
+
+    <button
+        id="noButton"
+        class="button no-button">
+
+        NO 😏
+
+    </button>
+
+</div>
+
+    </div>
+
+</section>
+
+/* =========================
+   PAGE 8 — PHOTO JOURNEY
+========================= */
+
+<section id="page8" class="page hidden">
+
+    <button class="back-button" data-back="page7">
+    ← Back
+</button>
+    <div class="content">
+
+        <h1 class="gallery-title">
+            A Little Journey Through You ❤️
+        </h1>
+
+        <div class="photo-gallery-frame">
+
+            <button
+                id="prevPhoto"
+                class="gallery-arrow left-arrow">
+                ❮
+            </button>
+
+            <div class="gallery-photo-container">
+
+                <img
+                    id="galleryPhoto"
+                    src="Assets/Images/image1.jpg"
+                    alt="Beautiful memory">
+
+            </div>
+
+            <button
+                id="nextPhoto"
+                class="gallery-arrow right-arrow">
+                ❯
+            </button>
+
+        </div>
+
+        <p
+            id="photoCounter"
+            class="photo-counter">
+            1 / 10
+        </p>
+
+        <p
+            id="photoHint"
+            class="photo-hint">
+            Swipe through them all for a little surprise... ❤️
+        </p>
+
+        <button
+            id="finaleButton"
+            class="button hidden">
+
+            Ready for the Finale? 🎆
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PAGE 9 — GRAND FINALE
+========================= -->
+
+<section id="page9" class="page hidden">
+    <button class="back-button" data-back="page8">
+    ← Back
+</button>
+    <!-- FIREWORKS -->
+<canvas id="fireworksCanvas"></canvas>
+
+    <div class="finale-content">
+
+        <h1 class="finale-title">
+            Happy Birthday, My Love ❤️
+        </h1>
+
+        <div class="finale-photo-frame">
+
+            <img
+                src="Assets/Images/finale.png"
+                alt="My beautiful girl"
+                class="finale-photo">
+
+        </div>
+
+        <p class="finale-text">
+            Today is all about you... ❤️
+        </p>
+
+        <p class="finale-text small">
+            I hope this little surprise reminds you
+            just how deeply you are loved.
+        </p>
+
+        <p class="finale-signature">
+            Forever yours, ❤️
+        </p>
+
+    </div>
+<button id="startButton" class="button start-button">
+    Start ❤️
+</button>
+</section>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* ==========================================
+           CORRECT NAME
+        ========================================== */
+
+        const correctName = "Kaali";
+
+
+       /* ==========================================
+   GET ELEMENTS
+========================================== */
+
+const page1 =
+    document.getElementById("page1");
+
+const page2 =
+    document.getElementById("page2");
+
+const beginButton =
+    document.getElementById("beginButton");
+
+const continueButton =
+    document.getElementById("continueButton");
+
+const nameInput =
+    document.getElementById("nameInput");
+
+const errorMessage =
+    document.getElementById("errorMessage");
+
+const successScreen =
+    document.getElementById("successScreen");
+
+const goAheadButton =
+    document.getElementById("goAheadButton");
+
+const page4 =
+    document.getElementById("page4");
+
+    const page5 =
+    document.getElementById("page5");
+
+    const page6 =
+    document.getElementById("page6");
+
+const letterNextButton =
+    document.getElementById("letterNextButton");
+
+    const page7 =
+    document.getElementById("page7");
+
+const yesButton =
+    document.getElementById("yesButton");
+
+const noButton =
+    document.getElementById("noButton");
+
+   let noButtonEscaped = false;
+
+
+function escapeNoButton() {
+
+    if (!noButtonEscaped) {
+
+        noButtonEscaped = true;
+
+        noButton.style.position = "fixed";
+
+    }
+
+    const maxX =
+        window.innerWidth - noButton.offsetWidth - 20;
+
+    const maxY =
+        window.innerHeight - noButton.offsetHeight - 20;
+
+    const randomX =
+        Math.random() * maxX;
+
+    const randomY =
+        Math.random() * maxY;
+
+    noButton.style.left = randomX + "px";
+
+    noButton.style.top = randomY + "px";
+
+}
+
+
+noButton.addEventListener(
+    "mouseenter",
+    escapeNoButton
+);
+
+
+noButton.addEventListener(
+    "touchstart",
+    function(event) {
+
+        event.preventDefault();
+
+        escapeNoButton();
+
+    }
+);
+
+const videoNextButton =
+    document.getElementById("videoNextButton");
+
+const memoryVideo =
+    document.getElementById("memoryVideo");
+
+const beginMemoriesButton =
+    document.getElementById("beginMemoriesButton");
+
+        /* ==========================================
+           WRONG NAME RESPONSES
+        ========================================== */
+
+        const wrongMessages = [
+
+            "Nope... I know you better than that. 😌",
+
+            "That's not the name I'm looking for. ❤️",
+
+            "Try again, beautiful. 😉"
+
+        ];
+
+
+        let wrongAttempt = 0;
+
+
+        /* ==========================================
+           BEGIN BUTTON
+        ========================================== */
+
+        beginButton.addEventListener(
+            "click",
+            function() {
+
+                page1.classList.add("hidden");
+
+                page2.classList.remove("hidden");
+
+                setTimeout(function() {
+
+                    nameInput.focus();
+
+                }, 600);
+
+            }
+        );
+
+
+        /* ==========================================
+           CHECK NAME
+        ========================================== */
+
+        function checkName() {
+
+            const enteredName =
+                nameInput.value.trim();
+
+
+            /* Empty input */
+
+            if (enteredName === "") {
+
+                errorMessage.textContent =
+                    "Please enter your name ❤️";
+
+                errorMessage.classList.add("show");
+
+                return;
+
+            }
+
+
+            /* Normalize capitalization */
+
+            const entered =
+                enteredName.toLowerCase();
+
+            const correct =
+                correctName.toLowerCase();
+
+
+            /* ======================================
+               CORRECT NAME
+            ====================================== */
+
+            if (entered === correct) {
+
+    errorMessage.classList.remove("show");
+
+    // Hide the name entry screen
+    page2.classList.add("hidden");
+
+    // Show the success screen
+    successScreen.classList.add("show");
+
+    return;
+
+}
+
+
+            /* ======================================
+               WRONG NAME
+            ====================================== */
+
+            errorMessage.textContent =
+                wrongMessages[wrongAttempt];
+
+            errorMessage.classList.add("show");
+
+
+            /* Move to next response */
+
+            wrongAttempt++;
+
+
+            if (wrongAttempt >= wrongMessages.length) {
+
+                wrongAttempt = 0;
+
+            }
+
+        }
+
+
+        /* ==========================================
+           CONTINUE BUTTON
+        ========================================== */
+
+        continueButton.addEventListener(
+            "click",
+            checkName
+        );
+
+
+        /* ==========================================
+           ENTER KEY
+        ========================================== */
+
+        nameInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    checkName();
+
+                }
+
+            }
+        );
+beginMemoriesButton.addEventListener("click", function() {
+
+    page4.classList.add("hidden");
+
+    page5.classList.remove("hidden");
+
+    memoryVideo.currentTime = 0;
+
+    memoryVideo.play();
+
+});
+goAheadButton.addEventListener("click", function() {
+
+    successScreen.classList.remove("show");
+
+    page4.classList.remove("hidden");
+
+});
+
+
+videoNextButton.addEventListener("click", function() {
+
+    memoryVideo.pause();
+    memoryVideo.currentTime = 0;
+
+    page5.classList.add("hidden");
+
+    page6.classList.remove("hidden");
+
+});
+letterNextButton.addEventListener("click", function() {
+
+    page6.classList.add("hidden");
+
+    page7.classList.remove("hidden");
+
+});
+
+
+/* =========================
+   PAGE 8 — PHOTO JOURNEY
+========================= */
+
+const page8 =
+    document.getElementById("page8");
+
+const galleryPhoto =
+    document.getElementById("galleryPhoto");
+
+const prevPhoto =
+    document.getElementById("prevPhoto");
+
+const nextPhoto =
+    document.getElementById("nextPhoto");
+
+const photoCounter =
+    document.getElementById("photoCounter");
+
+const photoHint =
+    document.getElementById("photoHint");
+
+const finaleButton =
+    document.getElementById("finaleButton");
+
+const page9 =
+    document.getElementById("page9");
+/* =========================
+   PHOTOS
+========================= */
+
+const galleryPhotos = [
+
+    "Assets/Images/image1.jpg",
+    "Assets/Images/image2.jpg",
+    "Assets/Images/image3.jpg",
+    "Assets/Images/image4.jpg",
+    "Assets/Images/image5.jpg",
+    "Assets/Images/image6.jpg",
+    "Assets/Images/image7.jpg",
+    "Assets/Images/image8.jpg",
+    "Assets/Images/image9.jpg",
+    "Assets/Images/image10.jpg"
+
+];
+
+
+let currentPhoto = 0;
+
+
+/* =========================
+   SHOW PHOTO
+========================= */
+
+function showGalleryPhoto() {
+
+    galleryPhoto.style.opacity = "0";
+    galleryPhoto.style.transform = "scale(0.97)";
+
+    setTimeout(function() {
+
+        galleryPhoto.src =
+            galleryPhotos[currentPhoto];
+
+        photoCounter.textContent =
+            (currentPhoto + 1) +
+            " / " +
+            galleryPhotos.length;
+
+        galleryPhoto.style.opacity = "1";
+        galleryPhoto.style.transform = "scale(1)";
+
+    }, 200);
+
+
+    /* =========================
+       FINAL PHOTO REACHED
+    ========================= */
+
+    if (currentPhoto === galleryPhotos.length - 1) {
+
+        photoHint.textContent =
+            "You've seen them all... ❤️";
+
+        finaleButton.classList.remove("hidden");
+
+    }
+
+}
+
+
+/* =========================
+   NEXT PHOTO
+========================= */
+
+nextPhoto.addEventListener("click", function() {
+
+    if (currentPhoto < galleryPhotos.length - 1) {
+
+        currentPhoto++;
+
+        showGalleryPhoto();
+
+    }
+
+});
+
+
+/* =========================
+   PREVIOUS PHOTO
+========================= */
+
+prevPhoto.addEventListener("click", function() {
+
+    if (currentPhoto > 0) {
+
+        currentPhoto--;
+
+        showGalleryPhoto();
+
+        /* Hide finale button again */
+
+        finaleButton.classList.add("hidden");
+
+        photoHint.textContent =
+            "Swipe through them all for a little surprise... ❤️";
+
+    }
+
+});
+
+/* =========================
+   PAGE 7 → PAGE 8
+========================= */
+
+yesButton.addEventListener("click", function() {
+
+    page7.classList.add("hidden");
+
+    page8.classList.remove("hidden");
+
+    currentPhoto = 0;
+
+    galleryPhoto.src =
+        galleryPhotos[currentPhoto];
+
+    photoCounter.textContent =
+        "1 / " + galleryPhotos.length;
+
+    photoHint.textContent =
+        "Swipe through them all for a little surprise... ❤️";
+
+    finaleButton.classList.add("hidden");
+
+});
+
+/* =========================
+   PAGE 8 → PAGE 9
+========================= */
+finaleButton.addEventListener(
+    "click",
+    function() {
+
+        page8.classList.add("hidden");
+
+        page9.classList.remove("hidden");
+
+        setTimeout(
+            startFireworks,
+            300
+        );
+
+    }
+);
+
+finaleButton.addEventListener(
+    "click",
+    function() {
+
+        page8.classList.add("hidden");
+
+        page9.classList.remove("hidden");
+
+        setTimeout(
+            startFireworks,
+            300
+        );
+
+    }
+);
+
+/* ==========================================
+   GRAND FINALE — REALISTIC FIREWORKS
+========================================== */
+
+const fireworksCanvas =
+    document.getElementById("fireworksCanvas");
+
+const fireworksCtx =
+    fireworksCanvas.getContext("2d");
+
+let fireworksWidth;
+let fireworksHeight;
+
+let fireworksRunning = false;
+
+const fireworksParticles = [];
+const fireworksRockets = [];
+
+
+/* ==========================================
+   RESIZE CANVAS
+========================================== */
+
+function resizeFireworksCanvas() {
+
+    const dpr =
+        window.devicePixelRatio || 1;
+
+    fireworksWidth =
+        window.innerWidth;
+
+    fireworksHeight =
+        window.innerHeight;
+
+    fireworksCanvas.width =
+        fireworksWidth * dpr;
+
+    fireworksCanvas.height =
+        fireworksHeight * dpr;
+
+    fireworksCanvas.style.width =
+        fireworksWidth + "px";
+
+    fireworksCanvas.style.height =
+        fireworksHeight + "px";
+
+    fireworksCtx.setTransform(
+        dpr,
+        0,
+        0,
+        dpr,
+        0,
+        0
+    );
+}
+
+resizeFireworksCanvas();
+
+window.addEventListener(
+    "resize",
+    resizeFireworksCanvas
+);
+
+
+/* ==========================================
+   FIREWORK COLORS
+========================================== */
+
+const fireworkColors = [
+
+    "#ff3b81",
+    "#ff5ca8",
+    "#ff8fc7",
+    "#ffb347",
+    "#ffd166",
+    "#ff6b35",
+    "#ffffff",
+    "#c77dff",
+    "#9d4edd",
+    "#4cc9f0",
+    "#72efdd",
+    "#f72585"
+
+];
+
+
+/* ==========================================
+   CREATE ROCKET
+========================================== */
+
+function createRocket() {
+
+    const x =
+        Math.random() *
+        fireworksWidth;
+
+    const targetY =
+        fireworksHeight *
+        (0.08 + Math.random() * 0.55);
+
+    const startY =
+        fireworksHeight + 20;
+
+    const color =
+        fireworkColors[
+            Math.floor(
+                Math.random() *
+                fireworkColors.length
+            )
+        ];
+
+    fireworksRockets.push({
+
+        x: x,
+
+        y: startY,
+
+        targetY: targetY,
+
+        speed: 7 + Math.random() * 4,
+
+        color: color,
+
+        trail: []
+
+    });
+
+}
+
+
+/* ==========================================
+   CREATE EXPLOSION
+========================================== */
+
+function createExplosion(
+    x,
+    y,
+    color
+) {
+
+    const particleCount =
+        80 + Math.floor(
+            Math.random() * 80
+        );
+
+    const angleOffset =
+        Math.random() * Math.PI * 2;
+
+    const power =
+        3.5 + Math.random() * 3;
+
+    for (
+        let i = 0;
+        i < particleCount;
+        i++
+    ) {
+
+        const angle =
+            angleOffset +
+            (Math.PI * 2 / particleCount) * i;
+
+        const speed =
+            power *
+            (0.55 + Math.random() * 0.75);
+
+        fireworksParticles.push({
+
+            x: x,
+
+            y: y,
+
+            vx:
+                Math.cos(angle) *
+                speed,
+
+            vy:
+                Math.sin(angle) *
+                speed,
+
+            alpha: 1,
+
+            decay:
+                0.008 +
+                Math.random() * 0.012,
+
+            gravity:
+                0.035 +
+                Math.random() * 0.025,
+
+            friction:
+                0.985,
+
+            size:
+                1.2 +
+                Math.random() * 2,
+
+            color: color,
+
+            sparkle:
+                Math.random() > 0.55
+
+        });
+
+    }
+
+
+    /* Bright central flash */
+
+    fireworksParticles.push({
+
+        x: x,
+
+        y: y,
+
+        vx: 0,
+
+        vy: 0,
+
+        alpha: 1,
+
+        decay: 0.08,
+
+        gravity: 0,
+
+        friction: 1,
+
+        size: 8,
+
+        color: "#ffffff",
+
+        sparkle: true
+
+    });
+
+}
+
+
+/* ==========================================
+   UPDATE ROCKETS
+========================================== */
+
+function updateRockets() {
+
+    for (
+        let i = fireworksRockets.length - 1;
+        i >= 0;
+        i--
+    ) {
+
+        const rocket =
+            fireworksRockets[i];
+
+        rocket.trail.push({
+            x: rocket.x,
+            y: rocket.y
+        });
+
+        if (
+            rocket.trail.length > 8
+        ) {
+
+            rocket.trail.shift();
+
+        }
+
+        rocket.y -= rocket.speed;
+
+        rocket.speed *= 0.985;
+
+
+        /* Explosion reached */
+
+        if (
+            rocket.y <=
+            rocket.targetY
+        ) {
+
+            createExplosion(
+                rocket.x,
+                rocket.y,
+                rocket.color
+            );
+
+            fireworksRockets.splice(
+                i,
+                1
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ==========================================
+   DRAW ROCKETS
+========================================== */
+
+function drawRockets() {
+
+    fireworksRockets.forEach(
+        rocket => {
+
+            fireworksCtx.beginPath();
+
+            fireworksCtx.arc(
+                rocket.x,
+                rocket.y,
+                2.5,
+                0,
+                Math.PI * 2
+            );
+
+            fireworksCtx.fillStyle =
+                "#ffffff";
+
+            fireworksCtx.shadowBlur =
+                15;
+
+            fireworksCtx.shadowColor =
+                rocket.color;
+
+            fireworksCtx.fill();
+
+
+            /* Rocket trail */
+
+            for (
+                let i = 0;
+                i < rocket.trail.length;
+                i++
+            ) {
+
+                const trail =
+                    rocket.trail[i];
+
+                const alpha =
+                    i /
+                    rocket.trail.length;
+
+                fireworksCtx.beginPath();
+
+                fireworksCtx.arc(
+                    trail.x,
+                    trail.y,
+                    1.5,
+                    0,
+                    Math.PI * 2
+                );
+
+                fireworksCtx.fillStyle =
+                    `rgba(255,255,255,${alpha})`;
+
+                fireworksCtx.fill();
+
+            }
+
+        }
+    );
+
+    fireworksCtx.shadowBlur = 0;
+
+}
+
+
+/* ==========================================
+   UPDATE PARTICLES
+========================================== */
+
+function updateParticles() {
+
+    for (
+        let i =
+            fireworksParticles.length - 1;
+        i >= 0;
+        i--
+    ) {
+
+        const particle =
+            fireworksParticles[i];
+
+        particle.vx *=
+            particle.friction;
+
+        particle.vy *=
+            particle.friction;
+
+        particle.vy +=
+            particle.gravity;
+
+        particle.x +=
+            particle.vx;
+
+        particle.y +=
+            particle.vy;
+
+        particle.alpha -=
+            particle.decay;
+
+
+        if (
+            particle.alpha <= 0
+        ) {
+
+            fireworksParticles.splice(
+                i,
+                1
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ==========================================
+   DRAW PARTICLES
+========================================== */
+
+function drawParticles() {
+
+    fireworksParticles.forEach(
+        particle => {
+
+            fireworksCtx.save();
+
+            fireworksCtx.globalAlpha =
+                particle.alpha;
+
+            fireworksCtx.beginPath();
+
+            fireworksCtx.arc(
+                particle.x,
+                particle.y,
+                particle.size,
+                0,
+                Math.PI * 2
+            );
+
+            fireworksCtx.fillStyle =
+                particle.color;
+
+            fireworksCtx.shadowBlur =
+                particle.sparkle
+                    ? 15
+                    : 8;
+
+            fireworksCtx.shadowColor =
+                particle.color;
+
+            fireworksCtx.fill();
+
+            fireworksCtx.restore();
+
+        }
+    );
+
+}
+
+
+/* ==========================================
+   FIREWORKS ANIMATION
+========================================== */
+
+function animateFireworks() {
+
+    if (!fireworksRunning) {
+
+        return;
+
+    }
+
+
+    fireworksCtx.clearRect(
+        0,
+        0,
+        fireworksWidth,
+        fireworksHeight
+    );
+
+
+    updateRockets();
+
+    updateParticles();
+
+    drawRockets();
+
+    drawParticles();
+
+
+    requestAnimationFrame(
+        animateFireworks
+    );
+
+}
+
+
+/* ==========================================
+   AUTOMATIC FIREWORK SPAWNER
+========================================== */
+
+let fireworksSpawnTimer;
+
+
+function startFireworks() {
+
+    if (fireworksRunning) {
+
+        return;
+
+    }
+
+    fireworksRunning = true;
+
+
+    /* Initial burst */
+
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
+
+        setTimeout(
+            createRocket,
+            i * 180
+        );
+
+    }
+
+
+    animateFireworks();
+
+
+    /* Continuous fireworks */
+
+    function spawnNext() {
+
+        if (!fireworksRunning) {
+
+            return;
+
+        }
+
+
+        /*
+         * Multiple fireworks at once
+         * makes the finale feel full.
+         */
+
+        const amount =
+            Math.random() > 0.55
+                ? 2
+                : 1;
+
+
+        for (
+            let i = 0;
+            i < amount;
+            i++
+        ) {
+
+            setTimeout(
+                createRocket,
+                i * 180
+            );
+
+        }
+
+
+        fireworksSpawnTimer =
+            setTimeout(
+                spawnNext,
+                350 +
+                Math.random() * 650
+            );
+
+    }
+
+
+    spawnNext();
+
+}
+
+
+/* ==========================================
+   STOP FIREWORKS
+========================================== */
+
+function stopFireworks() {
+
+    fireworksRunning = false;
+
+    clearTimeout(
+        fireworksSpawnTimer
+    );
+
+    fireworksRockets.length = 0;
+
+    fireworksParticles.length = 0;
+
+    fireworksCtx.clearRect(
+        0,
+        0,
+        fireworksWidth,
+        fireworksHeight
+    );
+
+}
+
+
+/* ==========================================
+   START WHEN PAGE 9 OPENS
+========================================== */
+
+finaleButton.addEventListener(
+    "click",
+    function() {
+
+        page8.classList.add("hidden");
+
+        page9.classList.remove("hidden");
+
+        /*
+         * Give the page a moment to become visible
+         * before starting the fireworks.
+         */
+
+        setTimeout(
+            startFireworks,
+            300
+        );
+
+    }
+);
+/* =========================
+   BACK BUTTONS
+========================= */
+
+const backButtons =
+    document.querySelectorAll(".back-button");
+
+backButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const currentPage =
+            button.closest(".page");
+
+        const previousPageId =
+            button.dataset.back;
+
+        const previousPage =
+            document.getElementById(previousPageId);
+
+        if (currentPage) {
+            currentPage.classList.add("hidden");
+        }
+
+        if (previousPage) {
+            previousPage.classList.remove("hidden");
+        }
+
+    });
+
+});
+
+/* =========================
+   PAGE 9 — START BUTTON
+========================= */
+
+const startButton =
+    document.getElementById("startButton");
+
+startButton.addEventListener("click", function() {
+
+    // Hide Screen 9
+    page9.classList.add("hidden");
+
+    // Show Screen 1
+    page1.classList.remove("hidden");
+
+});
+    </script>
+
+
+</body>
+
+</html>
